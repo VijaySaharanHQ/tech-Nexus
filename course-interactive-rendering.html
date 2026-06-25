@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Rendering | Tech Nexus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="course-page">
+
+    <nav class="navbar glass course-nav">
+        <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">Tech<span>Nexus</span></a></div>
+        <div class="course-title-bar">
+            <span>Course: Interactive Web Rendering</span>
+        </div>
+        <a href="coding-academy.html" class="btn primary-btn btn-small">Exit Course</a>
+    </nav>
+
+    <main class="course-workspace">
+        
+        <section class="learning-panel">
+            <div class="video-container glass">
+                <div class="video-placeholder">
+                    <span class="play-icon">▶</span>
+                    <p>Tutorial: Setting up the 3D Scene</p>
+                </div>
+            </div>
+
+            <div class="lesson-content">
+                <h2>Lesson 1: Initializing the Canvas</h2>
+                <p>In this module, we will set up the foundational environment for rendering 3D graphics in the browser.</p>
+                
+                <h3>Instructions:</h3>
+                <ul class="task-list">
+                    <li><input type="checkbox" disabled> Define a <code>&lt;canvas&gt;</code> element in your HTML with the id <code>webgl-canvas</code>.</li>
+                    <li><input type="checkbox" disabled> In your CSS, ensure the canvas takes up the full width and height of the preview window.</li>
+                    <li><input type="checkbox" disabled> Write a script to log "Canvas Ready" when the window loads to verify your connection.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="coding-panel">
+            
+            <div class="editor-container glass">
+                <div class="editor-tabs">
+                    <button class="tab-btn active" data-tab="html">index.html</button>
+                    <button class="tab-btn" data-tab="css">style.css</button>
+                    <button class="tab-btn" data-tab="js">script.js</button>
+                </div>
+                
+                <div class="code-area">
+                    <textarea id="html-editor" class="code-input active" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;!-- Write your canvas element here --&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+
+                    <textarea id="css-editor" class="code-input" spellcheck="false">/* Write your CSS here */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #111;
+}</textarea>
+
+                    <textarea id="js-editor" class="code-input" spellcheck="false">// Write your JavaScript here
+console.log('Environment initialized.');
+</textarea>
+                </div>
+            </div>
+
+            <div class="preview-container glass">
+                <div class="preview-header">Live Preview</div>
+                <div class="preview-window">
+                    <iframe id="live-preview" title="Live Preview"></iframe>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
