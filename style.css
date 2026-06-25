@@ -215,7 +215,7 @@ body {
 }
 
 .hub-card p {
-    color: var(--text-secondary);
+    color: var(--text-secondary); 
     font-size: 0.95rem;
 }
 
