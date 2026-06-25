@@ -1,0 +1,11 @@
+# 1. Create the core folders
+mkdir .github
+mkdir -p coding-academy/web-dev coding-academy/languages coding-academy/dsa coding-academy/challenges
+mkdir -p ai-hub/fundamentals ai-hub/gen-ai ai-hub/projects
+mkdir -p computer-learning/os-networking computer-learning/productivity computer-learning/cybersecurity
+mkdir -p developer-resources/templates developer-resources/source-codes developer-resources/career-prep
+mkdir -p student-notes/class-6-12 student-notes/ncert-solutions student-notes/question-banks
+mkdir -p innovation-lab/iot-automation innovation-lab/startups innovation-lab/game-dev
+
+# 2. Add a .gitkeep file to every empty folder so Git will track them
+find . -type d -empty -not -path "./.git/*" -exec touch {}/.gitkeep \;
