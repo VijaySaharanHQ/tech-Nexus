@@ -14,6 +14,14 @@ const PORT = process.env.PORT || 5000;
 // ==========================================
 app.use(cors()); // Enable Cross-Origin Resource Sharing
 app.use(express.json()); // Allow server to accept JSON data
+const mongoose = require('mongoose');
+
+// ==========================================
+// Database Connection
+// ==========================================
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log('📦 MongoDB Connected Successfully!'))
+    .catch((err) => console.error('❌ MongoDB Connection Error:', err));
 
 // ==========================================
 // Static File Serving (The Frontend)
