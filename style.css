@@ -1,23 +1,26 @@
-/* Basic Reset and Variables */
+/* --- CSS Variables for Easy Theming --- */
 :root {
-    --primary-color: #2563eb;
-    --background-color: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
+    --bg-color: #0f172a;       /* Deep tech blue/black */
+    --text-main: #f8fafc;      /* Off-white */
+    --text-muted: #94a3b8;     /* Slate gray */
+    --primary-accent: #3b82f6; /* Bright blue */
+    --card-bg: #1e293b;        /* Slightly lighter blue/black */
+    --card-hover: #2dd4bf;     /* Teal accent on hover */
 }
 
+/* --- Base Setup --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: var(--background-color);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6;
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -29,68 +32,100 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 60px 0;
+/* --- Hero Section --- */
+.hero {
     text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    border-bottom: 1px solid #334155;
 }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
-header p {
+/* A cool glowing text effect for the title */
+.glow-text {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.hero p {
     font-size: 1.2rem;
-    opacity: 0.9;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 30px auto;
 }
 
-/* Main Grid Layout */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-accent);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* --- Main Grid Layout --- */
 main {
     flex: 1;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 30px;
 }
 
-/* Cards */
+/* --- Interactive Cards --- */
 .card {
     background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 8px;
+    padding: 40px 30px;
+    border-radius: 12px;
     text-decoration: none;
     color: var(--text-main);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-color);
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .card h2 {
-    margin-bottom: 10px;
     font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .card p {
     color: var(--text-muted);
+    font-size: 1rem;
 }
 
-/* Footer */
+/* The hover effect that makes the cards pop */
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--card-hover);
+    box-shadow: 0 10px 30px -10px rgba(45, 212, 191, 0.3);
+}
+
+/* --- Footer --- */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background-color: #e2e8f0;
+    padding: 30px 20px;
+    border-top: 1px solid #334155;
     color: var(--text-muted);
-    margin-top: auto;
-}style.css
+    font-size: 0.9rem;
+}
