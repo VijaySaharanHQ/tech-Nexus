@@ -1,5 +1,5 @@
 # Contributing to Tech Nexus 🚀
-
+ 
 First off, thank you for considering contributing to Tech Nexus! It's people like you that make open-source education accessible and amazing. 
 
 Whether you are fixing a typo, adding a competitive programming solution, or writing a complete course module, your help is welcome here.
