@@ -1,29 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Keep the copyright year automatically updated
+    // 1. Dynamic Year in Footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // 2. Add a simple fade-in effect to the cards
+    // 2. Card Fade-in Animation
     const cards = document.querySelectorAll('.card');
-    
-    // Set initial state for animation
     cards.forEach(card => {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
     });
 
-    // Trigger the animation slightly after page load for a smooth effect
     setTimeout(() => {
         cards.forEach((card, index) => {
             setTimeout(() => {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
-            }, index * 100); // Staggers the animation by 100ms per card
+            }, index * 100); 
         });
-    }, 100);
+    }, 200);
 
-    console.log("Tech Nexus Hub initialized successfully!");
+    // 3. Typewriter Effect for Hero Section
+    const words = ["Programming.", "Generative AI.", "Hardware.", "Digital Literacy.", "Your Future."];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typewriterElement = document.getElementById('typewriter');
+    
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            charIndex--;
+        } else {
+            charIndex++;
+        }
+
+        typewriterElement.textContent = currentWord.substring(0, charIndex);
+
+        let typingSpeed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            typingSpeed = 2000; // Pause at the end of the word
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length; // Move to next word
+            typingSpeed = 500; // Pause before starting new word
+        }
+
+        setTimeout(typeEffect, typingSpeed);
+    }
+
+    // Start the typing effect
+    if (typewriterElement) {
+        setTimeout(typeEffect, 1000);
+    }
 });
