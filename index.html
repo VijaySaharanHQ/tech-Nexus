@@ -5,63 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Nexus | Open Source Learning</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">🌐 Tech Nexus</div>
+            <ul class="nav-links">
+                <li><a href="#explore">Curriculum</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="https://github.com/[your-username]/tech-nexus" target="_blank" class="nav-btn">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="container">
-            <h1 class="glow-text">🌐 Tech Nexus</h1>
-            <p>Your open-source ecosystem for programming, AI, and digital literacy.</p>
-            <a href="#explore" class="btn">Explore the Hub</a>
+            <h1 class="glow-text">Welcome to Tech Nexus</h1>
+            <p class="hero-subtitle">Your open-source ecosystem for <span id="typewriter" class="highlight"></span></p>
+            <div class="hero-buttons">
+                <a href="#explore" class="btn btn-primary">Start Learning</a>
+                <a href="../../CONTRIBUTING.md" class="btn btn-secondary">Contribute</a>
+            </div>
         </div>
     </header>
 
-    <main class="container" id="explore">
+    <main id="explore" class="container">
+        <div class="section-header">
+            <h2>📚 The Learning Pillars</h2>
+            <p>Explore completely free, open-source curriculum and resources.</p>
+        </div>
+
         <section class="grid-layout">
-            
             <a href="./coding-academy/" class="card">
                 <div class="icon">💻</div>
-                <h2>Coding Academy</h2>
+                <h3>Coding Academy</h3>
                 <p>Web dev, Python, DSA, and coding challenges.</p>
             </a>
             
             <a href="./ai-hub/" class="card">
                 <div class="icon">🤖</div>
-                <h2>AI Hub</h2>
+                <h3>AI Hub</h3>
                 <p>Machine learning, Gen AI, and prompt engineering.</p>
             </a>
             
             <a href="./computer-learning/" class="card">
                 <div class="icon">🖥️</div>
-                <h2>Computer Learning</h2>
+                <h3>Computer Learning</h3>
                 <p>OS, networking, productivity, and cybersecurity.</p>
             </a>
             
             <a href="./developer-resources/" class="card">
                 <div class="icon">🛠️</div>
-                <h2>Dev Resources</h2>
+                <h3>Dev Resources</h3>
                 <p>Templates, source codes, and interview prep.</p>
             </a>
             
             <a href="./student-notes/" class="card">
                 <div class="icon">🎒</div>
-                <h2>Student Notes</h2>
+                <h3>Student Notes</h3>
                 <p>Class 6-12 notes, NCERT solutions, and past papers.</p>
             </a>
             
             <a href="./innovation-lab/" class="card">
                 <div class="icon">🚀</div>
-                <h2>Innovation Lab</h2>
+                <h3>Innovation Lab</h3>
                 <p>IoT, game dev, and startup prototypes.</p>
             </a>
+        </section>
 
+        <section id="partners" class="partners-section">
+            <div class="section-header">
+                <h2>🤝 Our Partners & Sponsors</h2>
+                <p>Supported by amazing communities and tools.</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card">Open Source Initiative</div>
+                <div class="partner-card">GitHub Education</div>
+                <div class="partner-card">Your Sponsor Here</div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Tech Nexus. Open source under the MIT License.</p>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>🌐 Tech Nexus</h4>
+                <p>Bridging the gap between absolute beginners and tech-savvy developers through open-source education.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./coding-academy/">Coding Academy</a></li>
+                    <li><a href="./ai-hub/">AI Hub</a></li>
+                    <li><a href="./developer-resources/">Dev Tools</a></li>
+                    <li><a href="../../CONTRIBUTING.md">How to Contribute</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <ul class="social-links">
+                    <li><a href="#">🐦 Twitter / X</a></li>
+                    <li><a href="#">💼 LinkedIn</a></li>
+                    <li><a href="#">💬 Discord</a></li>
+                    <li><a href="#">📺 YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Tech Nexus. Released under the MIT License.</p>
         </div>
     </footer>
 
