@@ -1,0 +1,26 @@
+name: Code & Content Quality Check 🛡️
+
+# This tells the robot to wake up ONLY when a Pull Request is submitted to the main branch
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  formatting-check:
+    name: Scan Formatting & Syntax
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Step 1: The robot downloads the contributor's code to a temporary server
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      # Step 2: The robot installs the environment needed to run the scan
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      # Step 3: The robot runs Prettier to check if files are clean and error-free
+      - name: Enforce Clean Formatting
+        run: npx prettier --check "**/*.{html,css,js,md}"
